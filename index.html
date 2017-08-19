@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mastering A-Frame</title>
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <img src="images/texture.jpg" id="texture" alt="">
+            <img src="images/texture_2.jpg" id="texture_2" alt="">
+        </a-assets>
+        <a-box width="1" height="1" depth="1"
+            position="0 1 0" rotation="45 45 45" scale="1 2.5 1"
+            src="#texture">
+            <a-animation attribute="rotation" begin="click" repeat="indefinite" to="0 360 0"></a-animation>
+        
+            <a-event name="mouseenter" scale="4 1 6"></a-event>
+        </a-box>
+
+        <a-camera position="0 7 5">
+            <a-cursor color="#FF0000"></a-cursor>
+        </a-camera>
+    </a-scene>
+    <script>
+        // var box = document.querySelector('a-box');
+        // box.addEventListener("mouseenter", function() {
+        //     box.setAttribute("scale", {
+        //         x: 0.5,
+        //         y: 2,
+        //         z: 5.9
+        //     })
+        // });
+    </script>
+</body>
+</html>
